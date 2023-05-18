@@ -1,4 +1,4 @@
-FROM node:20.2-alpine3.17 AS builder
+FROM node:18.16-alpine3.17 AS builder
 
 WORKDIR /Midjourney
 
@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install --production
 
-FROM node:20.2-alpine3.17
+FROM node:18.16-alpine3.17
 
 ENV APP_DIR=/Midjourney
 
